@@ -1,3 +1,4 @@
+import path from 'path';
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import { buildSchema } from 'graphql';
@@ -5,7 +6,7 @@ import { importSchema } from 'graphql-import';
 
 import { root } from './resolver';
 
-const typeDefs = importSchema('./schema.graphql');
+const typeDefs = importSchema(path.resolve(__dirname, './schema.graphql'));
 const schema = buildSchema(typeDefs);
 
 const app = express();

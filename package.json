@@ -2,10 +2,11 @@
   "name": "try-graphql",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.ts"
+    "start:server": "nodemon server/index.ts",
+    "start:client": "ts-node client/index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -20,9 +21,11 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "express-graphql": "^0.9.0"
+    "express-graphql": "^0.9.0",
+    "graphql-request": "^1.8.2"
   },
   "nodemonConfig": {
-    "ext": "js,json,ts,graphql"
+    "ext": "js,json,ts,graphql",
+    "ignore": ["client/**"]
   }
 }
