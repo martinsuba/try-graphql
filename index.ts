@@ -5,8 +5,8 @@ import { importSchema } from 'graphql-import';
 
 import { root } from './resolver';
 
-const  typeDefs = importSchema('./schema.graphql');
-var schema = buildSchema(typeDefs);
+const typeDefs = importSchema('./schema.graphql');
+const schema = buildSchema(typeDefs);
 
 const app = express();
 app.use('/graphql', graphqlHTTP({

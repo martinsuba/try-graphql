@@ -1,9 +1,17 @@
 type User {
+  id: ID
   name: String
   age: String
+  cars: [Car]
+}
+
+type Car {
+  id: ID
+  name: String
 }
 
 type Query {
-  user: User
+  user(id: ID!): User
   allUsers: [User]
+  allCars: [Car]
 }

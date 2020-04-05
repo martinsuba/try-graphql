@@ -21,5 +21,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-graphql": "^0.9.0"
+  },
+  "nodemonConfig": {
+    "ext": "js,json,ts,graphql"
   }
 }
